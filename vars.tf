@@ -37,12 +37,12 @@ variable "instances" {
      rabbitmq ={
       name = "rabbitmq"
       type = "t3.micro"
-      password = "roboshop12"
+      password = "roboshop123"
     }
      payment ={
       name = "paymet"
       type = "t3.micro"
-      password = "roboshop12"
+      password = "roboshop123"
     }
   }
 }

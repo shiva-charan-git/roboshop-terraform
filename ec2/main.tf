@@ -14,7 +14,7 @@ resource "aws_instance" "ec2" {
    
 }
 
-resource "null_resource" "nulll" {
+resource "null_resource" "null" {
     provisioner "remote-exec" {
     connection {
        host= aws_instance.ec2.public_ip
