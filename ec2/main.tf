@@ -16,6 +16,7 @@ resource "aws_instance" "ec2" {
 
 resource "null_resource" "null" {
     provisioner "remote-exec" {
+      
     connection {
        host= aws_instance.ec2.public_ip
        user = "centos"
@@ -54,7 +55,7 @@ resource "aws_security_group" "sg" {
   }
 
   tags = {
-    Name = "allow_tls"
+    Name = "${var.component}-${var.env}-sg"
   }
 }
 resource "aws_route53_record" "record" {
