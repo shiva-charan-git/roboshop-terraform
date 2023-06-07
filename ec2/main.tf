@@ -23,7 +23,7 @@ resource "null_resource" "null" {
     }
 
     inline = [
-        "https://github.com/shiva-charan-git/roboshop.git",
+        "git clone https://github.com/shiva-charan-git/roboshop.git",
         "cd roboshop",
         "sudo bash ${var.component}.sh ${var.password}"
     ]
