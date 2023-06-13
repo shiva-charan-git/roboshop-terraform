@@ -14,7 +14,7 @@ resource "aws_instance" "ec2" {
    
 }
 
-resource "null_resource" "null" {
+resource "null_resource" "provisioner" {
     provisioner "remote-exec" {
       
     connection {
@@ -70,12 +70,10 @@ variable "component" {}
 
 variable "instance_type" {}
 
-variable "password" {}
-
-
-
-
 variable "env" {
     default = "dev"
   
 }
+
+variable "password" {}
+
