@@ -3,7 +3,7 @@
 data "aws_ami" "ami" {
   most_recent      = true
   name_regex       = "Centos-8-DevOps-Practice"
-  owners           = ["973714476881"]
+  owners           = ["290972336566"]
 }
 
 resource "aws_instance" "ec2" {
@@ -26,7 +26,9 @@ resource "null_resource" "provisioner" {
     }
     // ansible-pull -i localhost, -U
     inline = [
-      " git clone  https://github.com/shiva-charan-git/rosboshop-ansible.git roboshop.yml -e role_name=${var.component}"
+      " git clone  https://github.com/shiva-charan-git/rosboshop-ansible.git",
+      "cd roboshop-shell",
+      "sudo bash ${var.component}.sh ${var.password}"
     ]
  
    }
