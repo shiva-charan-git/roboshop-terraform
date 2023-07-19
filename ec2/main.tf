@@ -27,7 +27,7 @@ resource "null_resource" "provisioner" {
     // ansible-pull -i localhost, -U
     inline = [
       "git clone  https://github.com/shiva-charan-git/roboshop.git",
-      "cd roboshop-shell",
+      "cd roboshop",
       "sudo bash ${var.component}.sh ${var.password}"
     ]
  
