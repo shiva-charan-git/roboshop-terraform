@@ -75,5 +75,5 @@ variable "env" {
   
 }
 
-#variable "password" {}
+variable "password" {}
 
